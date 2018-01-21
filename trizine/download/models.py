@@ -1,0 +1,21 @@
+from django.db import models
+from django.template.loader import render_to_string
+from django.utils.safestring import mark_safe
+
+# Create your models here.
+
+class WebzineDown(models.Model):
+
+    title = models.CharField(max_length=120)
+    file = models.FileField(null=True, blank=True)
+
+    updated = models.DateTimeField(auto_now=True, auto_now_add=False)
+    timestamp = models.DateTimeField(auto_now=False, auto_now_add=True)
+
+
+
+    def __unicode__(self):
+        return self.title
+
+    def __str__(self):
+        return self.title

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>trizine webzine</title>
+    <style>
+     body{
+       text-align:center;
+     }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+<img src="download/templates/static/imgs/trizine_main.jpg" height="600" width="450" oncontextmenu="return false"/>
+<br/>
+<br/>
+<br/>
+<p><h2><a href="{% url 'down' %}">TRIZINE DOWNLOAD(트라이진 PDF 내려받기)</a></h2></p>
+
+<script>
+    $(document).ready(function(){
+      $('img').bind("contextmenu",function(e){
+        return false;
+      }
+    }
+</script>
+</body>
+</html>
